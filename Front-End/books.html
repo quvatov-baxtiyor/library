@@ -1,0 +1,239 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Books</title>-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<!--        <a class="navbar-brand" href="#">BookStore</a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--            <ul class="navbar-nav ml-auto">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Home</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="books.html">Books</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Contacts</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--    -->
+<!--    <header class="bg-primary text-white text-center py-5">-->
+<!--        <h1>Books</h1>-->
+<!--    </header>-->
+<!--    -->
+<!--    <main class="container my-5">-->
+<!--        <section class="books">-->
+<!--            <h2 class="text-center mb-4">Our books</h2>-->
+<!--            <div class="input-group mb-4">-->
+<!--                <input type="text" class="form-control" placeholder="Book search...">-->
+<!--                <div class="input-group-append">-->
+<!--                    <button class="btn btn-primary" type="button">Search</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4 mb-4">-->
+<!--                    <div class="card h-100 shadow">-->
+<!--                        <img src="https://peacocktv.com/dam/growth/assets/seo/HarryPotter/Franchise/hp-ss-min.png?downsize=1200:*&output-format=webp&output-quality=70" width="348" height="400" alt="Book Cover 1">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">The Harry Potter Series</h5>-->
+<!--                            <p class="card-text">Author: J. K. Rowling</p>-->
+<!--                            <button class="btn btn-primary" onclick="showBookInfo('book1')">More details</button>-->
+<!--                            <button class="btn btn-danger" onclick="deleteCard(this)">Delete</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-4 mb-4">-->
+<!--                    <div class="card h-100 shadow">-->
+<!--                        <img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" width="347" height="400" alt="Book Cover 2">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">The Lord of the Rings</h5>-->
+<!--                            <p class="card-text">Author: J.R.R. Tolkien</p>-->
+<!--                            <button class="btn btn-primary" onclick="showBookInfo('book2')">More details</button>-->
+<!--                            <button class="btn btn-danger" onclick="deleteCard(this)">Delete</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-4 mb-4">-->
+<!--                    <div class="card h-100 shadow">-->
+<!--                        <img src="https://cdn.kobo.com/book-images/60e67846-0acc-4e4e-b3cd-65e7a7c939e9/1200/1200/False/think-and-grow-rich-5.jpg" width="347" height="390" alt="Book Cover 3">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Think and Grow Rich</h5>-->
+<!--                            <p class="card-text">Author: Napoleon Hill</p>-->
+<!--                            <button class="btn btn-primary" onclick="showBookInfo('book3')">More details</button>-->
+<!--                            <button class="btn btn-danger" onclick="deleteCard(this)">Delete</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; Добавьте больше книг здесь &ndash;&gt;-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        -->
+<!--        <section class="book-info d-none" id="book-info">-->
+<!--            <h2 class="text-center mb-4">Book information</h2>-->
+<!--            <div id="book1" class="d-none">-->
+<!--                <h3>The Harry Potter Series</h3>-->
+<!--                <p>Author: J. K. Rowling</p>-->
+<!--                <p>Description: The meaning is obvious: good wins. But, among other things, the series teaches mutual assistance, kindness, and the value of true affection. Talks about how difficult it is sometimes to make a choice and how you can end up misunderstood.</p>-->
+<!--                <p>Rating: ★★★★☆</p>-->
+<!--                <p>Reviews: <em>"Great book!"</em></p>-->
+<!--            </div>-->
+<!--            <div id="book2" class="d-none">-->
+<!--                <h3>The Lord of the Rings</h3>-->
+<!--                <p>Author: J.R.R. Tolkien</p>-->
+<!--                <p>Description: The novel and film adaptation fascinate fans not only with the deeply written world of Middle-earth and the stories of the creatures that inhabit it, but also with a powerful philosophical message. Tolkien teaches us to distinguish good from evil and shares life wisdom in the author’s unique manner.</p>-->
+<!--                <p>Rating: ★★★★☆</p>-->
+<!--                <p>Reviews: <em>"Very interesting!"</em></p>-->
+<!--            </div>-->
+<!--            <div id="book3" class="d-none">-->
+<!--                <h3>Think and Grow Rich</h3>-->
+<!--                <p>Author: Napoleon Hill</p>-->
+<!--                <p>Description: Hill studied their habits and drew some 16 "laws" to be applied to achieve success. Think and Grow Rich condenses them, providing the reader with 14 principles in the form of a "Philosophy of Achievement". The main theme of the book is that anyone can achieve success and wealth by following a certain set of principles.</p>-->
+<!--                <p>Rating: ★★★★☆</p>-->
+<!--                <p>Reviews: <em>"Awesome book!"</em></p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Добавьте больше информации о книгах здесь &ndash;&gt;-->
+<!--            <button class="btn btn-secondary" onclick="hideBookInfo()">Back</button>-->
+<!--        </section>-->
+<!--    </main>-->
+<!--    -->
+<!--    <footer class="bg-dark text-white text-center py-4">-->
+<!--        <p>&copy; 2024 Online Book Store</p>-->
+<!--    </footer>-->
+<!--    -->
+<!--    <script>-->
+<!--        function showBookInfo(bookId) {-->
+<!--            document.querySelector('.books').classList.add('d-none');-->
+<!--            document.getElementById('book-info').classList.remove('d-none');-->
+<!--            document.getElementById(bookId).classList.remove('d-none');-->
+<!--        }-->
+
+<!--        function hideBookInfo() {-->
+<!--            document.querySelector('.books').classList.remove('d-none');-->
+<!--            document.getElementById('book-info').classList.add('d-none');-->
+<!--            document.querySelectorAll('.book-info > div').forEach(div => div.classList.add('d-none'));-->
+<!--        }-->
+
+<!--        function deleteCard(button) {-->
+<!--            const card = button.closest('.col-md-4');-->
+<!--            card.remove();-->
+<!--        }-->
+
+<!--        function removeFromCart() {-->
+<!--            hideBookInfo();-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BookStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="books.html">Books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="bg-primary text-white text-center py-5">
+    <h1>Books</h1>
+</header>
+
+<main class="container my-5">
+    <section class="books">
+        <h2 class="text-center mb-4">Our Books</h2>
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" placeholder="Book search...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+        <div class="row" id="books-container">
+            <!-- Book cards will be inserted here dynamically -->
+        </div>
+    </section>
+
+    <section class="book-info d-none" id="book-info">
+        <h2 class="text-center mb-4">Book Information</h2>
+        <div id="book-details">
+            <!-- Book details will be inserted here dynamically -->
+        </div>
+        <button class="btn btn-secondary" onclick="hideBookInfo()">Back</button>
+    </section>
+
+    <h1>Books</h1>
+    <ul id="booksList"></ul>
+    asfasdfa
+</main>
+
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2024 Online Book Store</p>
+</footer>
+
+<script>
+    function getBooks() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://0.0.0.0:8000/bookse/", true);
+        console.log("0000000000000000000000000000000000000000000000000")
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var books = JSON.parse(xhr.responseText);
+                console.log("11111111111111111111111111111111111111111111111111111")
+                displayBooks(books);
+            }
+        };
+        xhr.send();
+    }
+
+    function displayBooks(books) {
+        var booksList = document.getElementById("booksList");
+        console.log(booksList);
+        console.log("222222222222222222222222222222222222222222222")
+        booksList.innerHTML = ""; // Clear any existing content
+
+        books.forEach(function (book) {
+            var listItem = document.createElement("li");
+            listItem.textContent = book.title + " by " + book.author;
+            booksList.appendChild(listItem);
+        });
+    }
+
+    // Call the function to fetch and display books
+    getBooks();
+
+</script>
+</body>
+</html>
