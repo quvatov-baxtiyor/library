@@ -1,11 +1,9 @@
 from rest_framework import routers
 from django.urls import path,include
-from .views import BookViewSet, UserViewSet, ReviewViewSet
+from .views import BookViewSet
 
 router = routers.DefaultRouter()
-router.register(r'books', BookViewSet)
-router.register(r'users', UserViewSet)
-router.register(r'reviews', ReviewViewSet)
+router.register(r'bookse', BookViewSet)
 
 
 urlpatterns = [

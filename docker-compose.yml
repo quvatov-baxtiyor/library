@@ -23,5 +23,13 @@ services:
       POSTGRES_USER: library_user
       POSTGRES_PASSWORD: library_password
 
+  frontend:
+    build:
+      context: ./Front-End/
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "8080:80"
+
 volumes:
   postgres_data:
