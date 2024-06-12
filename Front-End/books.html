@@ -206,8 +206,8 @@
 <script>
     function getBooks() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://0.0.0.0:8000/bookse/", true);
-        console.log("0000000000000000000000000000000000000000000000000")
+        xhr.open("GET", "https://mutoala.uz/api/bookse/", true);
+        console.log("00000000oooooooooooooooooooooooooooo")
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var books = JSON.parse(xhr.responseText);
